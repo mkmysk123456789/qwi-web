@@ -220,7 +220,8 @@ p {
 }
 
 .nav-logo img {
-  max-height: 7.5vw;
+  max-height: 14vw;
+  max-width: 200px;
 }
 
 .nav-links {

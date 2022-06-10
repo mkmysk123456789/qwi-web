@@ -2,7 +2,7 @@ const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 
 let w, h, particles;
-let particleDistance = 60;
+let particleDistance = 40;
 let mouse = {
     x: undefined,
     y: undefined,
