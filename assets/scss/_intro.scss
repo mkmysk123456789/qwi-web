@@ -1,0 +1,44 @@
+.intro-container {
+  padding: 0 20vw;
+  padding-top: 170px;
+  padding-bottom: 70vh;
+}
+
+.intro-title {
+  color: #0d2446;
+}
+
+.intro-body {
+  color: #003054;
+  font-size: 15px;
+  margin-top: 70px;
+  width: 60%;
+  line-height: 2.4;
+  margin-bottom: 20px;
+}
+
+.bg-circle {
+  position: absolute;
+  z-index: -10;
+  opacity: 0.5;
+  max-width: 32vw;
+}
+
+.circle1 {
+  right: -10vw;
+}
+
+.circle2 {
+  margin-top: 80vh;
+  left: -10vw;
+}
+
+.glass {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba($color: #002e72, $alpha: 0.17);
+  backdrop-filter: blur(80px);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}

@@ -18,13 +18,15 @@
     <meta name="theme-color" content="#ffffff" />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/scss/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/lineicons.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+    <canvas id="canvas"></canvas>
     <!-- ====== Header Start ====== -->
     <header class="header ">
         <div class="nav-bar">
@@ -44,20 +46,17 @@
 
 
 
-                        <canvas id="canvas"></canvas>
 
-                        <a class="youtube-link" href="https://youtu.be/p4a0WGMTQaU" target="_blank">https://
-youtu.be/p4a0WGMTQaU</a> </li>
 
-                    <li>
-                        <a href="#pricing">Research</a>
-                    </li>
-                    <li>
-                        <a href="#pricing">Products</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+                        <li>
+                            <a href="#pricing">Research</a>
+                        </li>
+                        <li>
+                            <a href="#pricing">Products</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
                 </ul>
             </nav>
         </div>
@@ -68,8 +67,7 @@ youtu.be/p4a0WGMTQaU</a> </li>
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="comfortaa">AI</span>
-                    <span class="noto-sans-jp">で世界を明るく照らす。</span>
+                    <span class="comfortaa montserrat">To Democratize Marketing.</span>
                 </h1>
                 <p class="hero-description">
                     テクノロジーを駆使して世界をよりよい場所に。
@@ -138,12 +136,52 @@ youtu.be/p4a0WGMTQaU</a> </li>
                             <h3 class="ud-feature-title">Free and Open-Source</h3>
                             <p class="ud-feature-desc">
 
-                                <!-- function onScroll(event) { const sections = document.querySelectorAll(".ud-menu-scroll"); const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop; for (let i = 0; i
-                                < sections.length; i++) { const currLink=s ections[i]; const val=c urrLink.getAttribute( "href"); const refElement=d ocument.querySelector(val); const scrollTopMinus=s crollPos + 73; if ( refElement.offsetTop <=s crollTopMinus && refElement.offsetTop
-                                    + refElement.offsetHeight> scrollTopMinus ) { document .querySelector(".ud-menu-scroll") .classList.remove("active"); currLink.classList.add("active"); } else { currLink.classList.remove("active"); } } } window.document.addEventListener("scroll",
-                                    onScroll); -->
-                                <!-- </script> -->
-                                <script type="text/javascript" src="assets/js/main.js"></script>
+                                <!-- ====== All Javascript Files ====== -->
+                                <script src="assets/js/bootstrap.bundle.min.js"></script>
+                                <script src="assets/js/main.js"></script>
+                                <script>
+                                    // ==== for menu scroll
+                                    const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+                                    pageLink.forEach((elem) => {
+                                        elem.addEventListener("click", (e) => {
+                                            e.preventDefault();
+                                            document.querySelector(elem.getAttribute("href")).scrollIntoView({
+                                                behavior: "smooth",
+                                                offsetTop: 1 - 60,
+                                            });
+                                        });
+                                    });
+
+                                    // section menu active
+                                    function onScroll(event) {
+                                        const sections = document.querySelectorAll(".ud-menu-scroll");
+                                        const scrollPos =
+                                            window.pageYOffset ||
+                                            document.documentElement.scrollTop ||
+                                            document.body.scrollTop;
+
+                                        for (let i = 0; i < sections.length; i++) {
+                                            const currLink = sections[i];
+                                            const val = currLink.getAttribute("href");
+                                            const refElement = document.querySelector(val);
+                                            const scrollTopMinus = scrollPos + 73;
+                                            if (
+                                                refElement.offsetTop <= scrollTopMinus &&
+                                                refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+                                            ) {
+                                                document
+                                                    .querySelector(".ud-menu-scroll")
+                                                    .classList.remove("active");
+                                                currLink.classList.add("active");
+                                            } else {
+                                                currLink.classList.remove("active");
+                                            }
+                                        }
+                                    }
+
+                                    window.document.addEventListener("scroll", onScroll);
+                                </script>
 </body>
 
 </html>
