@@ -5,6 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
+html {
+  font-size: 1vw;
+}
+
 :root {
   --body-color: #637381;
   --heading-color: #212b36;
@@ -98,24 +102,29 @@ h6 {
   margin: 0px;
 }
 
-h1 {
-  font-size: 48px;
-}
-h2 {
-  font-size: 36px;
-}
-h3 {
-  font-size: 28px;
-}
-h4 {
-  font-size: 22px;
-}
-h5 {
-  font-size: 18px;
-}
-h6 {
-  font-size: 16px;
-}
+// h1 {
+//   font-size: 48px;
+// }
+
+// h2 {
+//   font-size: 36px;
+// }
+
+// h3 {
+//   font-size: 28px;
+// }
+
+// h4 {
+//   font-size: 22px;
+// }
+
+// h5 {
+//   font-size: 18px;
+// }
+
+// h6 {
+//   font-size: 16px;
+// }
 
 p {
   font-size: 16px;
@@ -163,6 +172,7 @@ p {
     padding-left: 40px;
     padding-right: 40px;
   }
+
   @media #{$sm} {
     padding-left: 20px;
     padding-right: 20px;

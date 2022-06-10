@@ -80,7 +80,7 @@ class Particle {
         this.speed = (Math.random() * 25) + 5;
     }
     draw() {
-        ctx.fillStyle = "rgba(255,255,255,1)";
+        ctx.fillStyle = "rgba(255,255,255,0.5)";
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
